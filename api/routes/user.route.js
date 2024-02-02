@@ -3,6 +3,7 @@ import { test } from "../controllers/user.controller.js";
 
 const router=express.Router();
 
+//base url
 router.get('/test',test)
 
 
