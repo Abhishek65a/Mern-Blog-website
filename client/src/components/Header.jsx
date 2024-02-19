@@ -26,7 +26,7 @@ export default function Header() {
         <TextInput
           type="text"
           placeholder="search.."
-          rightIcon={AiOutlineSearch}
+          rightIcon={AiOutlineSearch} 
           className="hidden lg:inline"
         />
       </form>
