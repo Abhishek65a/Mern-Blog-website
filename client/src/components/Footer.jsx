@@ -78,6 +78,6 @@ export default function FooterCom() {
             </div>
         </div>
       </div>
-    </Footer>
+    </Footer> 
   );
 }
