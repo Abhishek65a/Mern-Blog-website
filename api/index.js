@@ -36,7 +36,7 @@ app.use((err,res,req,next)=>{
         success:false,
         statusCode,
         message
-    })
+    }) 
 })
 
 //creation of port number

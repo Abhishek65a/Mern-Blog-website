@@ -35,7 +35,7 @@ export const signup = async (req, res, next) => {
     next(error);
   }
 };
- 
+  
 
 //signin
 
@@ -44,7 +44,7 @@ export const signin = async (req, res, next) => {
 
    //normal validation
   if (!email || !password || email === "" || password === "") {
-    next(errorHandler(400, "All Fields Are Required"));
+    next(errorHandler(400, "All Fields Are Required")); 
   }
 
   try {
