@@ -93,7 +93,7 @@ export const google = async (req, res, next) => {
           name.toLowerCase().split(" ").join("") +
           Math.random().toString(9).slice(-4),
         email,
-        password: hashedPassword,
+        password: hashedPassword, 
         profilePicture: googlePhotoUrl,
       });
       await newUser.save();
