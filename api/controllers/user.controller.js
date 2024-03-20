@@ -21,7 +21,7 @@ export const updateUser = async (req, res, next) => {
       return next(
         errorHandler(400, "Username must be between 7 to 20 characters")
       );
-    }
+    } 
     if (req.body.username.includes(" ")) {
       return next(errorHandler(400, "Username must not contain spaces"));
     }
@@ -33,6 +33,7 @@ export const updateUser = async (req, res, next) => {
         errorHandler(400, "Username should contain only letters and numbers")
       );
     }
+  }
     try {
       const updateUser = await User.findByIdAndUpdate(
         req.params.userId,
@@ -51,5 +52,4 @@ export const updateUser = async (req, res, next) => {
     } catch (error) {
       next(error);
     }
-  }
 };
