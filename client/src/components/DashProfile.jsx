@@ -127,12 +127,12 @@ export default function DashProfile() {
       }
     } catch (error) {
       dispatch(updateFailure(error.message));
-    } 
+    }
   };
 
   const handleDeleteUser = async () => {
     setShowModal(false);
-    try {  
+    try {
       dispatch(deleteUserStart());
       const res = await fetch(`/api/user/delete/${currentUser._id}`, {
         method: "DELETE",
