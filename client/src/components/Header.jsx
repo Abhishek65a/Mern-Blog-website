@@ -80,9 +80,9 @@ export default function Header() {
             }
           >
             <Dropdown.Header>
-              <span className="block text-sm">@{currentUser.username}</span>
+              <span className="block text-sm">User:{currentUser.username}</span>
               <span className="block text-sm font-medium">
-                {currentUser.email}
+                Email:{currentUser.email}
               </span>
             </Dropdown.Header>
 
