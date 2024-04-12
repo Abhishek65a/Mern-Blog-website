@@ -2,7 +2,8 @@ import Post from "../models/post.model.js";
 import { errorHandler } from "../utils/error.js";
 
 export const create = async (req, res, next) => {
-  if (!req.body.isAdmin) {
+  
+  if (!req.user.isAdmin) {
     return next(errorHandler(403, "You are not allowed to create a post"));
   }
   if (!req.body.title || !req.body.content) {
@@ -11,7 +12,7 @@ export const create = async (req, res, next) => {
   const slug = req.body.title
     .split(" ")
     .join("-")
-    .toLoerCase()
+    .toLowerCase()
     .replace(/[^a-zA-Z0-9-]/, "-");
   const newPost = new Post({
     ...req.body,
