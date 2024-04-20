@@ -10,6 +10,15 @@ import cookieParser  from "cookie-parser";
 //configuring dotenv file
 dotenv.config()
 
+//mongoDB connection code
+mongoose.connect(
+    process.env.MONGO 
+).then(()=>{
+    console.log('mongodb connected succesfully!!');
+}).catch((err)=>{
+    console.log(err);
+})
+
 //invoking of expressjs
 const app = express();
 
@@ -24,14 +33,7 @@ app.listen(3000, () => {
   });
 
  
-//mongoDB connection code
-mongoose.connect(
-    process.env.MONGO
-).then(()=>{
-    console.log('mongodb connected succesfully!!');
-}).catch((err)=>{
-    console.log(err);
-})
+
 
 //Base URL's
 app.use('/api/user',userRoutes)
