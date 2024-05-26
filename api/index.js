@@ -27,10 +27,6 @@ app.use(express.json());
 
 app.use(cookieParser());
 
-//creation of port number
-app.listen(3000, () => {
-    console.log("Server is running on PORT 3000!");
-  });
 
  
 
@@ -52,3 +48,8 @@ app.use((err,res,req,next)=>{
     }) 
 })
 
+
+//creation of port number
+app.listen(3000, () => {
+    console.log("Server is running on PORT 3000!");
+  });
